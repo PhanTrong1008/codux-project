@@ -3,18 +3,25 @@ import styles from './App.module.scss';
 import { Input } from './components/input/input';
 import { Label } from './components/label/label';
 import { SubmitButton } from './components/submit-button/submit-button';
+import { FormRow } from './components/form-row/form-row';
 
 function App() {
     return (
         <div className={styles.App}>
             <form>
-                <Label>Name</Label>
-                <Input id={'name'} name={'name'} />
-                <Label>Email</Label>
-                <Input id={'email'} name={'email'} />
-                <Label>Message</Label>
-                <Input id={'message'} name={'message'}></Input>
-                <SubmitButton />
+                <FormRow>
+                    <Label htmlFor={'Name'}>Name</Label>
+                    <Input id={'name'} name={'name'}></Input></FormRow>
+                <FormRow>
+                    <Label>Email</Label>
+                    <Input id={'email'} name={'email'} /></FormRow>
+                <FormRow>
+                    <Label>Message</Label>
+                    <Input id={'message'} name={'message'}></Input>
+                </FormRow>
+                <FormRow>
+                    <SubmitButton />
+                </FormRow>
             </form>
         </div>
     );

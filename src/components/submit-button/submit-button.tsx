@@ -12,6 +12,6 @@ export interface SubmitButtonProps {
  */
 export const SubmitButton = ({ className, children }: SubmitButtonProps) => {
     return <div className={classNames(styles.root, className)}>
-        <button>Submit{children}</button>
+        <button className={styles.submitButton}>SUBMIT{children}</button>
     </div>;
 };
